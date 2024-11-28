@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Practice</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .hidden { display: none; }
+    .message { font-size: 18px; margin: 10px 0; }
+    .definition { margin: 20px 0; font-style: italic; }
+    input[type="text"] { width: 100%; padding: 10px; font-size: 16px; margin: 10px 0; }
+    button { margin: 5px; padding: 10px; font-size: 16px; }
+    #scoreDisplay { font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Spelling Practice</h1>
+  <div id="scoreDisplay">Correct: 0 | Incorrect: 0</div>
+  <textarea id="wordsInput" placeholder="Enter words separated by commas" rows="4" cols="50"></textarea>
+  <br><br>
+  <button id="startBtn">Start Practice</button>
+  <div id="gameContainer" class="hidden">
+    <div class="message" id="spokenWord"></div>
+    <input type="text" id="userInput" placeholder="Type your spelling here">
+    <div>
+      <button id="checkBtn">Check Spelling</button>
+      <button id="repeatBtn">Repeat Word</button>
+    </div>
+    <div class="message" id="feedback"></div>
+    <div class="definition hidden" id="definition"></div>
+    <button id="nextBtn" class="hidden">Next Word</button>
+  </div>
+  <div class="message" id="finalScore" class="hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
